@@ -38,10 +38,6 @@ class Join extends PluginBase implements Listener {
         if ($this->join->get("Spawn-Teleport", true) === true) {
              $player->teleport($this->getServer()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
         }
-        $this->getJoinUI($player);
-        if ($this->join->get("JoinSound", true) === true) {
-            PluginUtils::PlaySound($player, $this->join->get("PlaySoundJoin"), 1, 1);
-        }
         if ($this->join->get("PlayerJoin", true) === true) {
         $message1 = $this->join->get("PlayerJoinMessage");
         $this->getServer()->broadcastMessage(str_replace("{PLAYER}", $player->getName(), $message1));
