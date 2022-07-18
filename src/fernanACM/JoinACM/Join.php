@@ -60,7 +60,6 @@ class Join extends PluginBase implements Listener {
         }
     }
     
-    public function getJoinUI(Player $player){
         $form = new SimpleForm(function(Player $player, $data){
             if($data !== null){
               switch($data){
